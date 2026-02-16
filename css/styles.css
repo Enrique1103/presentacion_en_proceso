@@ -48,13 +48,13 @@
 }
 
 .card__about-title {
-  text-align: center;
+    text-align: center;
 }
 
 
 .card__about-text {
-  line-height: 1.6;
-  font-family: sans-serif;
+    line-height: 1.6;
+    font-family: sans-serif;
 }
 
 
@@ -68,9 +68,9 @@
 
 
 .card__form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
 }
 
