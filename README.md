@@ -4,7 +4,7 @@
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 # Professional Portfolio Card - Luis Enrique León Bolado
-[Preview de la Tarjeta](preview.jpg)
+[Preview de la Tarjeta](preview.png)
 
 Este repositorio contiene el código fuente de mi tarjeta de presentación profesional interactiva. El objetivo de este proyecto es demostrar habilidades en **Frontend Development**  aprednidas en la certificacion de Meta de Full-Stack (HTML5/CSS3) y consolidar mi marca personal como **Backend Developer**.
 
