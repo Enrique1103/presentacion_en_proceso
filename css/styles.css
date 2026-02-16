@@ -1,4 +1,14 @@
-/* ESTILOS GENERALES Y CONTENEDOR */
+/* ESTILOS GLOBALES */
+body {
+    background: radial-gradient(circle at top, #eef2f3 0%, #8e9eab 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
 .card {
     display: flex;
     flex-direction: column;
@@ -9,7 +19,12 @@
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     overflow: hidden;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 /* HEADER (Efecto de Solape) */
@@ -17,7 +32,7 @@
     display: flex;
     align-items: center;
     padding: 30px 20px;
-    background-color: #2c3e50;
+    background-color: #2c3e50; /* Color profesional oscuro */
     position: relative;
 }
 
@@ -42,33 +57,36 @@
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
-/* CUERPO DE CONTACTO Y TEXTO */
-.card__contact {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 25px;
+/* SECCIÓN ABOUT ME (Centrado y con aire) */
+.card__content {
+    padding: 0 30px; /* Separación del borde izquierdo y derecho solicitada */
 }
 
 .card__about-title {
-    margin-bottom: 5px;
     color: #2c3e50;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
 }
 
 .card__about-text {
     line-height: 1.6;
     color: #555;
     font-size: 0.95rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center; /* Centrado visual */
 }
 
-/* ICONOS Y ENLACES (Corregidos) */
-.card__email-icon, 
-.card__linkedin-icon, 
-.card__github-icon { 
-    width: 20px; 
-    height: 20px; 
-    object-fit: contain;
+/* CONTACTO Y ENLACES (Sin subrayado) */
+.card__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 30px;
 }
 
 .card__email-item, 
@@ -77,39 +95,53 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    text-decoration: none;
-    color: #2c3e50;
+    text-decoration: none; /* Quita el subrayado */
+    color: #2c3e50;        /* Color acorde al header */
     font-weight: 500;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
 }
 
-/* Hover uniforme para los items de contacto */
-.card__email-item:hover, 
-.card__linkedin-item:hover, 
-.card__github-item:hover { 
-    transform: translateX(8px);
-    color: #4CAF50;
+/* Estilo específico para las etiquetas <a> internas si las tienes */
+.card__contact a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* FORMULARIO */
+.card__contact a:hover {
+    color: #4CAF50; /* Cambio de color sutil al pasar el mouse */
+    transform: translateX(5px);
+}
+
+.card__email-icon, 
+.card__linkedin-icon, 
+.card__github-icon { 
+    width: 20px; 
+    height: 20px; 
+    object-fit: contain;
+}
+
+/* FORMULARIO (Estilo moderno) */
 .card__form {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 20px;
+    padding: 25px;
     background: #fdfdfd;
+    border-top: 1px solid #eee;
 }
 
 .card__form-input {
     padding: 12px 20px;
-    border: 2px solid #e0e0e0;
+    border: 1px solid #e0e0e0;
     border-radius: 25px;
     outline: none;
+    background: rgba(255, 255, 255, 0.9);
     transition: border-color 0.3s;
 }
 
 .card__form-input:focus {
-    border-color: #7dd97d;
+    border-color: #4CAF50;
 }
 
 .card__form-button {
@@ -120,15 +152,17 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
 }
 
 .card__form-button:hover {
     background-color: #45a049;
     transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
 }
 
-/* RESPONSIVE (Para celulares) */
+/* RESPONSIVE */
 @media (max-width: 480px) {
     .card__header {
         flex-direction: column;
@@ -144,16 +178,15 @@
 
     .card__information {
         margin-left: 0;
-        margin-top: -25px; /* Solape vertical en móvil */
+        margin-top: -25px;
         padding: 35px 20px 20px 20px;
         border-radius: 20px;
         width: 100%;
-        text-align: center;
     }
 
     .card__email-item, 
     .card__linkedin-item, 
     .card__github-item {
-        justify-content: center; /* Centra los iconos en móvil */
+        justify-content: center;
     }
 }
