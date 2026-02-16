@@ -1,4 +1,10 @@
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
 # Professional Portfolio Card - Luis Enrique León Bolado
+[Preview de la Tarjeta](preview.jpg)
 
 Este repositorio contiene el código fuente de mi tarjeta de presentación profesional interactiva. El objetivo de este proyecto es demostrar habilidades en **Frontend Development**  aprednidas en la certificacion de Meta de Full-Stack (HTML5/CSS3) y consolidar mi marca personal como **Backend Developer**.
 
